@@ -1,0 +1,55 @@
+radix 1 1 1 4 4 1 1 4 4 4 4 1 4 4 4 4
+io    i i i i i i i i i i i i i i i i
+
+vname precharge write_EN read_EN A<[4:1]> A_B<[4:1]> A<0> A_B<0> D<[15:12]> D<[11:8]> D<[7:4]> D<[3:0]> clk D_B<[15:12]> D_B<[11:8]> D_B<[7:4]> D_B<[3:0]>
+slope 0.005
+vih 1
+vil 0
+tunit ns
+
+0 0 0 0 A 5 0 1 0 0 0 0 0 F F F F
+5 1 1 0 A 5 0 1 9 0 5 4 0 6 F A B
+;Write 6 operation 
+
+10 0 0 0 5 A 0 1 0 0 0 0 0 F F F F
+15 1 1 0 5 A 0 1 9 8 4 C 0 6 7 B 3
+;Write 1 operation 
+
+20 0 0 0 B 4 0 1 0 0 0 0 0 F F F F
+25 1 1 0 B 4 0 1 2 1 1 B 0 D E E 4
+;Write 2 operation 
+
+30 0 0 0 F 0 1 0 0 0 0 0 0 F F F F
+35 1 1 0 F 0 1 0 5 F 2 B 0 A 0 D 4
+;Write 5 operation 
+
+
+
+
+;Read 5 operation
+40 0 0 0 F 0 1 0 0 0 0 0 0 F F F F
+45 1 0 1 F 0 1 0 0 0 0 0 0 F F F F
+47 1 0 1 F 0 1 0 0 0 0 0 1 F F F F
+53 1 0 1 F 0 1 0 0 0 0 0 0 F F F F
+
+
+;Read 2 opeation 
+55 0 0 0 B 4 0 1 0 0 0 0 0 F F F F
+60 1 0 1 B 4 0 1 0 0 0 0 0 F F F F
+62 1 0 1 B 4 0 1 0 0 0 0 1 F F F F
+68 1 0 1 B 4 0 1 0 0 0 0 0 F F F F
+
+
+
+;Read 1 operation
+70 0 0 0 5 A 0 1 0 0 0 0 0 F F F F
+75 1 0 1 5 A 0 1 0 0 0 0 0 F F F F
+77 1 0 1 5 A 0 1 0 0 0 0 1 F F F F
+83 1 0 1 5 A 0 1 0 0 0 0 0 F F F F
+
+
+;Read 6 operation
+85 0 0 0 A 5 0 1 0 0 0 0 0 F F F F
+90 1 0 1 A 5 0 1 0 0 0 0 0 F F F F
+92 1 0 1 A 5 0 1 0 0 0 0 1 F F F F
+98 1 0 1 A 5 0 1 0 0 0 0 0 F F F F
